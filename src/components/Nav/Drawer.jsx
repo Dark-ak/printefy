@@ -17,7 +17,7 @@ const Drawer = ({ drawer, setDrawer }) => {
     return (
         <div className={`z-50 fixed inset-0 ${drawer ? "block" : "hidden"}`}>
             <div className='flex'>
-                <div className='min-w-[250px] h-screen bg-white'>
+                <div className='min-w-[300px] h-screen bg-white'>
                     <div className="">
                         <div className='flex justify-center border-b-2 shadow-sm relative items-center py-3'>
                             <p className='text-2xl font-bold'>Menu</p>
@@ -70,7 +70,7 @@ const Drawer = ({ drawer, setDrawer }) => {
 
 
                             </div>
-                            <div className="" onClick={() => toggleActive(3)}>
+                            <div className="h-full" onClick={() => toggleActive(3)}>
                                 <div className='flex items-center justify-between'>
                                     <p className='text-lg font-semibold'>Use-cases</p>
 

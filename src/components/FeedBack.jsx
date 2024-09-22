@@ -15,7 +15,7 @@ const FeedBack = () => {
                     <p className='text-gray-500 font-medium md:w-[40%]'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</p>
                 </div>
 
-                <div className='flex md:gap-10 flex-col lg:flex-row md:justify-start'>
+                <div className='flex md:gap-10 flex-col lg:flex-row md:justify-start gap-4'>
 
                     <div className='bg-white px-6 rounded-3xl py-8 flex gap-6 flex-col md:px-10'>
                         <div className='flex gap-5  '>
