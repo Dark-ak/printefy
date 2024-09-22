@@ -6,9 +6,9 @@ const Hero = () => {
     return (
         <div>
             <div>
-                <div className='mt-24 pl-10 pr-20 md:px-20'>
-                    <p className='text-3xl font-bold md:w-[70%]'>Create and sell custom products</p>
-                    <div className='py-5 flex flex-col gap-2'>
+                <div className='mt-24  pl-10 pr-20 md:px-20 md:my-36 md:pl-40'>
+                    <p className='text-3xl font-bold md:w-[70%] md:text-6xl'>Create and sell custom products</p>
+                    <div className='py-5 flex flex-col gap-2 md:mt-4'>
                         <div className='flex gap-2 items-center'>
                             <FaCheck color='blue' />
                             <p className='font-medium'>100% Free to use</p>
@@ -22,7 +22,7 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    <div className='flex gap-3 flex-row max-[464px]:flex-col'>
+                    <div className='flex gap-3 mt-5 flex-row max-[464px]:flex-col md:mt-6'>
                         <button className="bg-blue-500 text-white px-6 rounded font-medium py-3 w-fit max-[464px]:w-full">
                             Start for Free
                         </button>
