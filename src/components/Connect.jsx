@@ -1,4 +1,4 @@
-import React from 'react'
+
 import printify from "../assets/printify.svg"
 import logo from "../assets/stores-background.svg"
 import etsy from "../assets/etsy-MXXFYORZ.svg"

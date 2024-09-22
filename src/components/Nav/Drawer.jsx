@@ -15,9 +15,9 @@ const Drawer = ({ drawer, setDrawer }) => {
     }
 
     return (
-        <div className={`absolute inset-0 ${drawer ? "block" : "hidden"}`}>
+        <div className={`z-50 fixed inset-0 ${drawer ? "block" : "hidden"}`}>
             <div className='flex'>
-                <div className='min-w-[250px] h-fit bg-white'>
+                <div className='min-w-[250px] h-screen bg-white'>
                     <div className="">
                         <div className='flex justify-center border-b-2 shadow-sm relative items-center py-3'>
                             <p className='text-2xl font-bold'>Menu</p>

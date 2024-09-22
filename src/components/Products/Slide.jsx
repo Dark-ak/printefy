@@ -1,4 +1,4 @@
-import React from 'react'
+    
 import create from "../../assets/custom-products.png"
 import sell from "../../assets/your-products.png"
 import handle from "../../assets/fullfillment.png"
