@@ -1,5 +1,4 @@
-import Check from "./components/Check"
-import Connect from "./components/Connect"
+
 import Features from "./components/Features"
 import Hero from "./components/Hero"
 import Nav from "./components/Nav"
@@ -22,7 +21,7 @@ function App() {
       <Features />
       <Products />
       {/* <Check /> */}
-      <Connect />
+
       <Sales />
       <FeedBack />
       <Profit />
