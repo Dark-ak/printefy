@@ -1,4 +1,4 @@
-import React from 'react'
+
 import robert from "../assets/robert-voltaire.png"
 import star from "../assets/star-S46SZESO.svg"
 import Arrow from "../assets/arrow-down.svg?react"

@@ -1,4 +1,4 @@
-import React from 'react'
+
 import clothesM from "../assets/clothes-mobile.jpeg"
 import bottom from "../assets/clothes-bottom.svg"
 import { GoArrowRight } from "react-icons/go";
