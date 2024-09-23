@@ -2,8 +2,22 @@
 import robert from "../assets/robert-voltaire.png"
 import star from "../assets/star-S46SZESO.svg"
 import Arrow from "../assets/arrow-down.svg?react"
+import { motion } from "framer-motion"
+
 
 const FeedBack = () => {
+
+
+    const anim = {
+        x:0,
+        transition:{
+            type:"spring",
+            stiffness:50,
+            duration: 0.5
+        },
+        opacity: 1
+    }
+
     return (
         <div className='bg-gray-100 px-4 py-20 relative md:px-32'>
             <div className='absolute -bottom-8 right-0 flex z-30 justify-center m-auto w-full'>
@@ -12,7 +26,9 @@ const FeedBack = () => {
             <div className='flex flex-col gap-10 md:items-center'>
                 <div className='flex flex-col gap-4 md:items-center md:flex-row md:gap-20'>
                     <p className='font-bold text-3xl md:text-4xl md:w-[30%]'>Trsuted by over 8M sellers all over the world</p>
-                    <p className='text-gray-500 font-medium md:w-[40%]'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</p>
+                    <motion.div initial={{x:-100, opacity:0}} whileInView={anim} viewport={{once:true, amount:0.5}}>
+                        <p className='text-gray-500 font-medium md:w-[40%]'>Whether you are just getting started or run an enterprise-level e-commerce business, we do everything we can to ensure a positive merchant experience.</p>
+                    </motion.div>
                 </div>
 
                 <div className='flex md:gap-10 flex-col lg:flex-row md:justify-start gap-4'>

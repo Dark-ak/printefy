@@ -20,8 +20,6 @@ function App() {
       <Hero />
       <Features />
       <Products />
-      {/* <Check /> */}
-
       <Sales />
       <FeedBack />
       <Profit />

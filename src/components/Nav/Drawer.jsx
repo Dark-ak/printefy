@@ -2,7 +2,7 @@
 
 import { RiCloseLargeLine } from "react-icons/ri";
 import { FaChevronUp } from "react-icons/fa";
-
+import { motion } from "framer-motion"
 import { useState } from "react";
 
 const Drawer = ({ drawer, setDrawer }) => {
@@ -14,10 +14,21 @@ const Drawer = ({ drawer, setDrawer }) => {
         setActive(active !== index ? index : 0)
     }
 
+    const draw = {
+        close: { x: "-100%", bgOpacity: 0, transition: { duration: 0.9, } },
+        open: { x: 0, bgOpacity: 1, transition: { duration: 0.8 } }
+    }
+
+    const overlay = {
+        close: { opacity: 0 },
+        open: { opacity: 0.5, transition: { duration: 0.5 } }
+
+    }
+
     return (
-        <div className={`z-50 fixed inset-0 ${drawer ? "block" : "hidden"}`}>
-            <div className='flex'>
-                <div className='min-w-[300px] h-screen bg-white'>
+        <div className="inset-0 top-0">
+            <motion.div variants={draw} initial="close" animate={drawer ? "open" : "close"} className={`fixed top-0 left-0 inset-0 z-50`}>
+                <div className='w-[70%] h-screen z-50 inset-0 fixed  bg-white'>
                     <div className="">
                         <div className='flex justify-center border-b-2 shadow-sm relative items-center py-3'>
                             <p className='text-2xl font-bold'>Menu</p>
@@ -31,7 +42,7 @@ const Drawer = ({ drawer, setDrawer }) => {
                                 <div className='flex items-center justify-between'>
                                     <p className='text-lg font-semibold'>How it works</p>
 
-                                    <FaChevronUp  className="rotate-180"/>
+                                    <FaChevronUp className="rotate-180" />
                                 </div>
                                 <div
                                     className={`overflow-hidden transition-max-height duration-300 ease-in-out ${active === 1 ? 'max-h-fit' : 'max-h-0'}`}
@@ -53,7 +64,7 @@ const Drawer = ({ drawer, setDrawer }) => {
                                 <div className='flex items-center justify-between'>
                                     <p className='text-lg font-semibold'>Services</p>
 
-                                    <FaChevronUp  className="rotate-180"/>
+                                    <FaChevronUp className="rotate-180" />
                                 </div>
                                 <div
                                     className={`overflow-hidden transition-max-height duration-300 ease-in-out ${active === 2 ? 'max-h-40' : 'max-h-0'}`}
@@ -64,7 +75,7 @@ const Drawer = ({ drawer, setDrawer }) => {
                                         <p className="font-medium">Transfer Products</p>
                                         <p className="font-medium">Order in Bulk</p>
                                         <p className="font-medium">Experts Program</p>
-                                        
+
                                     </div>
                                 </div>
 
@@ -74,7 +85,7 @@ const Drawer = ({ drawer, setDrawer }) => {
                                 <div className='flex items-center justify-between'>
                                     <p className='text-lg font-semibold'>Use-cases</p>
 
-                                    <FaChevronUp  className="rotate-180"/>
+                                    <FaChevronUp className="rotate-180" />
                                 </div>
                                 <div
                                     className={`overflow-hidden transition-max-height duration-300 ease-in-out ${active === 3 ? 'max-h-40' : 'max-h-0'}`}
@@ -84,7 +95,7 @@ const Drawer = ({ drawer, setDrawer }) => {
                                         <p className="font-medium">Merch for eCommerce</p>
                                         <p className="font-medium">Merch for Enterperises</p>
                                         <p className="font-medium">Grow Your Store</p>
-                                        
+
                                     </div>
                                 </div>
 
@@ -94,7 +105,7 @@ const Drawer = ({ drawer, setDrawer }) => {
                                 <div className='flex items-center justify-between'>
                                     <p className='text-lg font-semibold'>Need Help</p>
 
-                                    <FaChevronUp  className="rotate-180"/>
+                                    <FaChevronUp className="rotate-180" />
                                 </div>
                                 <div
                                     className={`overflow-hidden transition-max-height duration-300 ease-in-out ${active === 4 ? 'max-h-40' : 'max-h-0'}`}
@@ -111,11 +122,11 @@ const Drawer = ({ drawer, setDrawer }) => {
                         </div>
                     </div>
                 </div>
-                <div onClick={() => setDrawer(false)} className='bg-black opacity-45 w-full'>
-                    <p>working</p>
-                </div>
-            </div>
 
+            </motion.div>
+            {drawer && 
+            <motion.div variants={overlay} initial="close" animate={drawer ? "open" : "close"} className="bg-black inset-0 z-0 fixed">
+            </motion.div>}
         </div>
     )
 }
